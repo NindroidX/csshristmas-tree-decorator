@@ -9,7 +9,7 @@ var styleLintPlugin = require('stylelint-webpack-plugin');
 require('es6-promise').polyfill();
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/js/main.js',
 
   output: {
     path: __dirname,

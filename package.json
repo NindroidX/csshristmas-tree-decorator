@@ -1,18 +1,18 @@
 {
-  "name": "webpack-es6-sass-setup",
+  "name": "Csshristmas-tree-decorator",
   "version": "0.0.1",
-  "description": "A sample setup for Webpack with ES6 and Sass",
+  "description": "A technical test for a Front-end position.",
   "main": "webpack.config.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3001 --hot --inline",
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "./node_modules/.bin/webpack --config webpack.config.js"
   },
-  "author": "Aki Karkkainen",
+  "author": "Sam Van Campenhout",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/akikoo/webpack-es6-sass-setup.git"
+    "url": ""
   },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
@@ -27,18 +27,16 @@
     "stylelint-selector-bem-pattern": "^1.0.0",
     "stylelint-webpack-plugin": "^0.2.0",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1",
+    "extract-text-webpack-plugin": "^1.0.1"
   },
   "keywords": [
     "babel",
-    "boilerplate",
     "es6",
     "sass",
-    "starter-kit",
     "workflow",
     "webpack"
   ],
   "dependencies": {
-    "extract-text-webpack-plugin": "^1.0.1"
   }
 }
