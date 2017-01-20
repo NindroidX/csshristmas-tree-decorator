@@ -4,12 +4,14 @@
    border-bottom: $height solid $color;
  }
 
+ .christmas-tree-container {
+   position: absolute;
+   bottom: 20%;
+   width: 100%;
+ }
+
 .christmas-tree {
-  max-width: 50%;
-  margin: 0 auto;
   position: relative;
-  position: absolute;
-  bottom: 25%;
 }
 
 .christmas-tree__branche {
@@ -59,12 +61,22 @@
 
 }
 
-
-
-
 .christmas-tree__trunk {
   background-color: rgb(89, 59, 38);
   width: 50px;
   height: 50px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.christmas-tree__shadow {
+  background-color: $colorShadow;
+  width: 200px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -15px;
+  z-index: 0;
 }
