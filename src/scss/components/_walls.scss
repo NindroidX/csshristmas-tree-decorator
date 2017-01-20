@@ -1,19 +1,8 @@
 .walls {
   position: absolute;
   width: 100%;
-  height: 100%;
-  &:before, &:after {
-    content: "";
-    display: block;
-    height: 100%;
-    width: 50%;
-    float: left;
-  }
-  &:before {
-    background-color: pink;
-  }
-  &:after {
-    background-color: orange;
-  }
   height: calc(100% - #{$floorHeight});
+  // background-color: #8c622e;
+  background-color: #7d0800;
+
 }
