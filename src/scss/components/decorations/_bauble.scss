@@ -1,0 +1,71 @@
+// Based off this https://codepen.io/abergin/pen/pvEbWE
+
+.bauble {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.bauble__shape {
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #f55e69;
+  z-index: 1;
+  position: absolute;
+  margin: -75px 0 0 -75px;
+  height: 150px;
+  width: 150px;
+}
+
+.bauble__shape__shading {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: -10px -20px 0 0 rgba(154, 59, 66, 0.127) inset;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 120px;
+    height: 90px;
+    border-radius: 50%;
+    top: -20px;
+    left: -20px;
+  }
+}
+
+.bauble__nub {
+  width: 40px;
+  height: 40px;
+  background-color: #f55e69;
+  position: absolute;
+  top: -90px;
+  left: -20px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    background-color: #d7e4fa;
+    margin: -8px 0 0 -5px;
+    width: 50px;
+    height: 12px;
+  }
+
+  &:after {
+    background-color: rgba(255, 255, 255, 0.1);
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 52px;
+    top: -12px;
+    right: 0;
+    width: 20px;
+  }
+}
