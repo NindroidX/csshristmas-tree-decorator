@@ -15,4 +15,5 @@
   &:after {
     background-color: orange;
   }
+  height: calc(100% - #{$floorHeight});
 }

@@ -6,7 +6,7 @@
 
  .christmas-tree-container {
    position: absolute;
-   bottom: 20%;
+   bottom: calc(#{$floorHeight} - 10%); // Position the tree relative to the floor
    width: 100%;
  }
 
