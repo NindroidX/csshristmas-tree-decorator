@@ -1,10 +1,6 @@
 .star {
   $starSize: 40px;
   $denominator: 1.3;
-
-  position: fixed;
-  top: 50%;
-  left: 50%;
   &__shape {
     position: relative;
     display: block;

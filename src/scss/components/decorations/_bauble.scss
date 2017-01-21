@@ -1,10 +1,11 @@
 // Based on: https://codepen.io/abergin/pen/pvEbWE
 
 .bauble {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  // position: relative;
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  position: relative;
+  display: inline-block;
 
 }
 
@@ -67,6 +68,7 @@
     margin: -3px 0 0 -1px;
     width: 12px;
     height: 3px;
+    left: 0;
   }
 
   &:after {
