@@ -1,0 +1,51 @@
+.star {
+  $starSize: 40px;
+  $denominator: 1.3;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  &__shape {
+    position: relative;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right:  $starSize solid transparent;
+    border-bottom: $starSize / $denominator  solid $colorGold;
+    border-left:   $starSize solid transparent;
+    transform: rotate(180deg);
+
+
+
+    &:before,
+    &:after {
+      border-right:  $starSize solid transparent;
+      border-bottom: $starSize / $denominator  solid $colorGold;
+      border-left:   $starSize solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      left: -$starSize;
+      display: block;
+      content: '';
+    }
+
+    &:before {
+      transform: rotate(70deg);
+    }
+    &:after {
+      transform: rotate(-70deg);
+    }
+  }
+
+  &__stick {
+    border-bottom: 25px solid darken($colorGold, 5%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 30px;
+    margin: 0 auto;
+  }
+
+}

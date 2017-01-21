@@ -1,4 +1,4 @@
-// Based off: https://codepen.io/abergin/pen/pvEbWE
+// Based on: https://codepen.io/abergin/pen/pvEbWE
 
 .bauble {
   position: fixed;
@@ -45,7 +45,7 @@
   width: 10px;
   height: 10px;
   background-color: transparent;
-  border: 2px solid #FFD700;
+  border: 2px solid $colorGold;
   border-radius: 50%;
   position: relative;
   margin: 0 auto;
