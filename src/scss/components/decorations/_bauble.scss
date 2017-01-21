@@ -1,9 +1,11 @@
-// Based off this https://codepen.io/abergin/pen/pvEbWE
+// Based off: https://codepen.io/abergin/pen/pvEbWE
 
 .bauble {
   position: fixed;
   top: 50%;
   left: 50%;
+  // position: relative;
+
 }
 
 .bauble__shape {
@@ -11,16 +13,16 @@
   border-radius: 50%;
   background-color: #f55e69;
   z-index: 1;
-  position: absolute;
-  margin: -75px 0 0 -75px;
-  height: 150px;
-  width: 150px;
+  position: relative;
+  margin-top: -1px;
+  height: 40px;
+  width: 40px;
 }
 
 .bauble__shape__shading {
   position: absolute;
   border-radius: 50%;
-  box-shadow: -10px -20px 0 0 rgba(154, 59, 66, 0.127) inset;
+  box-shadow: -2px -5px 0 0 rgba(#000, 0.1) inset;
   z-index: 2;
   bottom: 0;
   right: 0;
@@ -31,21 +33,30 @@
     content: "";
     position: absolute;
     background-color: rgba(255, 255, 255, 0.1);
-    width: 120px;
-    height: 90px;
+    width: 30px;
+    height: 20px;
     border-radius: 50%;
-    top: -20px;
-    left: -20px;
+    top: -5px;
+    left: -5px;
   }
 }
 
+.bauble__ring {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
 .bauble__nub {
-  width: 40px;
-  height: 40px;
+  width: 10px;
+  height: 5px;
   background-color: #f55e69;
-  position: absolute;
-  top: -90px;
-  left: -20px;
+  margin: 0 auto;
+  position: relative;
 
   &:before {
     content: "";
@@ -53,19 +64,39 @@
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     background-color: #d7e4fa;
-    margin: -8px 0 0 -5px;
-    width: 50px;
-    height: 12px;
+    margin: -3px 0 0 -1px;
+    width: 12px;
+    height: 3px;
   }
 
   &:after {
     background-color: rgba(255, 255, 255, 0.1);
     content: "";
     position: absolute;
-    width: 10px;
-    height: 52px;
-    top: -12px;
+    width: 5px;
+    height: 5px;
+    top: -0px;
     right: 0;
-    width: 20px;
+  }
+}
+
+.bauble--white {
+  .bauble__shape,
+  .bauble__nub {
+    background-color: #e8e8e8;
+  }
+}
+
+.bauble--blue {
+  .bauble__shape,
+  .bauble__nub {
+    background-color: #5e60f5;
+  }
+}
+
+.bauble--orange {
+  .bauble__shape,
+  .bauble__nub {
+    background-color: #df9b27;
   }
 }
