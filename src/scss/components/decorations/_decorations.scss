@@ -4,3 +4,11 @@
 .decoration {
   z-index: 10;
 }
+
+.dragged-decorations {
+  position: absolute;
+
+  .decoration {
+    position: fixed;
+  }
+}
