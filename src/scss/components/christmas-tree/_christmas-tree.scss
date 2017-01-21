@@ -8,6 +8,7 @@
    position: absolute;
    bottom: calc(#{$floorHeight} - 10%); // Position the tree relative to the floor
    width: 100%;
+   z-index: 9;
  }
 
 .christmas-tree {
@@ -15,47 +16,53 @@
 }
 
 .christmas-tree__branche {
-  // background-color: green;
-  // width: 150px;
-  // height: 150px;
   width: 0;
   height: 0;
   margin: 0 auto;
   position: relative;
   transform-origin: bottom center;
   &--top {
-    @include branch(80px, 140px, rgb(27, 186, 52));
+    @include branch(80px, 140px, #1bba34);
+    z-index: 3;
     & + .christmas-tree__branche-curve {
       width: 160px;
       height: 15px;
       border-radius: 0 0 50% 50%;
-      background-color: rgb(27, 186, 52);
+      background-color: #1bba34;
       margin: 0 auto;
+      z-index: 3;
+      position: relative;
     }
   }
 
   &--middle {
-    @include branch(120px, 200px, rgb(27, 186, 52));
+    @include branch(120px, 200px, darken(#1bba34, 2%));
     margin-top: -100px;
+    z-index: 2;
     // transform: rotate(3deg);
     & + .christmas-tree__branche-curve {
       width: 240px;
       height: 20px;
       border-radius: 0 0 50% 50%;
-      background-color: rgb(27, 186, 52);
+      background-color: darken(#1bba34, 2%);
       margin: 0 auto;
+      z-index: 2;
+      position: relative;
     }
   }
   &--bottom {
-    @include branch(160px, 300px, rgb(27, 186, 52));
+    @include branch(160px, 300px, darken(#1bba34, 5%));
     margin-top: -170px;
+    z-index: 1;
     // transform: rotate(-5deg);
     & + .christmas-tree__branche-curve {
       width: 320px;
       height: 30px;
       border-radius: 0 0 50% 50%;
-      background-color: rgb(27, 186, 52);
+      background-color: darken(#1bba34, 5%);
       margin: 0 auto;
+      z-index: 1;
+      position: relative;
     }
   }
 
