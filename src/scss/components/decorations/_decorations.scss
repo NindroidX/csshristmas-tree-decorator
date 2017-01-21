@@ -3,6 +3,10 @@
 
 .decoration {
   z-index: 10;
+  transition: opacity 300ms ease;
+  &.removable {
+    opacity: .6;
+  }
 }
 
 .dragged-decorations {

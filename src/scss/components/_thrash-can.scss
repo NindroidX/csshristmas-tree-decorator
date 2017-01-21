@@ -1,0 +1,99 @@
+// Thrash can based on: https://codepen.io/msaetre/pen/mAtJF
+
+$thrashCanColor: #9c9c9c;
+
+.thrash-can-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(82, 61, 47, 0.83);
+  border-radius: 0 0 0 15px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.hovering, &:hover {
+    .thrash-can__lid {
+      transform: rotate(-120deg);
+    }
+  }
+
+
+  @media(min-width: 768px) {
+    top: initial;
+    right: 0;
+    bottom: 0;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(82, 61, 47, 0.83);
+    border-radius: 15px 0 0 0;
+    box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+body {
+  background-color: #151517;
+}
+
+
+.thrash-can {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.thrash-can__lid {
+  width: 62%;
+  height: 10%;
+  position: absolute;
+  left: 50%;
+  margin-left: -31%;
+  bottom: 75%;
+  background-color: $thrashCanColor;
+  border-radius: 80% 80% 0 0;
+
+  transform: rotate(0);
+  transform-origin: bottom left;
+  transition: all 300ms ease;
+
+  &:after {
+    content: "";
+    width: 26%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -13%;
+    margin-top: -10%;
+    background-color: inherit;
+    border-radius: 30% 30% 0 0;
+    transform: rotate(-1deg);
+  }
+}
+
+.thrash-can__bucket {
+  width: 56%;
+  height: 65%;
+  position: absolute;
+  left: 50%;
+  margin-left: -28%;
+  bottom: 10%;
+  background-color: $thrashCanColor;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+
+  &:after {
+    content: "";
+    width: 110%;
+    height: 12%;
+    position: absolute;
+    left: 50%;
+    margin-left: -55%;
+    top: 0;
+    background-color: darken($thrashCanColor, 10%);
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+  }
+}

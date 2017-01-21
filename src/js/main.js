@@ -29,7 +29,6 @@ let decorationInteractable = interact('.dragged-decorations .decoration')
 let decorationDrawerInteractable = interact('.decoration-drawer .decoration')
   .on('move', function (event) {
     let interaction = event.interaction;
-    console.log(interaction);
 
     if (interaction.pointerIsDown && !interaction.interacting()) {
       let drawerDecoration = event.currentTarget;
@@ -54,5 +53,31 @@ let decorationDrawerInteractable = interact('.decoration-drawer .decoration')
         decorationInteractable,
         decoration
       );
+    }
+  });
+
+
+let thrashCanInteractable = interact('.thrash-can-container')
+  .dropzone({
+    accept: '.decoration',
+    ondrop: function (event) {
+      const decoration = event.relatedTarget;
+
+      // Thrash the decoration
+      draggedDecorations.removeChild(decoration);
+
+      // Close the thrash can
+      event.target.classList.remove('hovering');
+    },
+    ondragenter: (event) => {
+      // Put the decoration and thrash can in the 'Will be removed' state
+      event.target.classList.add('hovering');
+      event.relatedTarget.classList.add('removable');
+
+    },
+    ondragleave: (event) => {
+      // Remove the decoration and thrash from the'Will be removed' state
+      event.target.classList.remove('hovering');
+      event.relatedTarget.classList.remove('removable');
     }
   });
