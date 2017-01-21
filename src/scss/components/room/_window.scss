@@ -1,10 +1,14 @@
+$maxWidth: 500px;
+$maxHeight: 600px;
 
 .window {
   width: 80%;
   height: 80%;
+  max-width: $maxWidth;
+  max-height: $maxHeight;
   position: absolute;
   bottom: 10%;
-  left: 10%;
+  right: 10%;
   background-color: #321c35;
   border: 20px solid #775327;
   overflow: hidden;
@@ -39,13 +43,13 @@
 	border-left: $windowsillHeight/2 solid transparent;
 	border-right: $windowsillHeight/2 solid transparent;
 	height: 0;
-	width: 100%;
   position: absolute;
   bottom: 0;
-  left: 0;
   width: calc(80% + #{$windowsillHeight});
-  left: calc(10% - #{$windowsillHeight / 2});
+  max-width: $maxWidth + $windowsillHeight;
+  right: calc(10% - #{$windowsillHeight / 2});
   bottom: calc(10% - #{$windowsillHeight});
+
   &:after {
     content: "";
     position: absolute;

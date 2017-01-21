@@ -13,6 +13,12 @@
 
 .christmas-tree {
   position: relative;
+  transform: scale(.8);
+  transform-origin: bottom;
+
+  @media(min-width: 768px) {
+    transform: scale(1);
+  }
 }
 
 .christmas-tree__branche {
