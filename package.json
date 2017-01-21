@@ -20,6 +20,7 @@
     "babel-loader": "^5.3.2",
     "css-loader": "^0.21.0",
     "es6-promise": "^3.0.2",
+    "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.3.3",
     "postcss-loader": "^0.7.0",
     "sass-loader": "^3.0.0",
@@ -27,8 +28,7 @@
     "stylelint-selector-bem-pattern": "^1.0.0",
     "stylelint-webpack-plugin": "^0.2.0",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1",
-    "extract-text-webpack-plugin": "^1.0.1"
+    "webpack-dev-server": "^1.12.1"
   },
   "keywords": [
     "babel",
@@ -38,5 +38,6 @@
     "webpack"
   ],
   "dependencies": {
+    "interact.js": "^1.2.8"
   }
 }
