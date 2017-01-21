@@ -2,14 +2,14 @@
 
 .moon {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 15px;
+  right: 15px;
   width: 100px;
   height: 100px;
   background-color: #beb5d0;
   border-radius: 50%;
-  box-shadow: inset -8px -8px 0 0px #9098a1;
-  box-shadow: inset -8px -8px 0 0px rgba(#000, .3);
+  box-shadow: inset -8px -8px 0 0px rgba(#000, .3),
+              0px 0px 200px 30px rgba(255,255,255,0.25);
   display: flex;
   justify-content: center;
   align-items: center;
