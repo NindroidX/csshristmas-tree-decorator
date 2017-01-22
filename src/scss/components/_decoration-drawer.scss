@@ -3,11 +3,7 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-
-  $offset: 10px;
-  // left: $offset;
-  // width: calc(100% - (#{$offset} * 2));
-
+  z-index: 9;
 }
 
 .decoration-drawer {
@@ -26,7 +22,8 @@
     display: flex;
   }
 
-  .star { // Scale the star to make it fit within the drawer
+  .star {
+    // Scale the star to make it fit within the drawer
     transform: scale(.7);
     transform-origin: bottom;
   }
