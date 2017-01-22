@@ -25,7 +25,7 @@ Start the Webpack server (includes live reloading when you change files):
   $ yarn start
 ```
 
-Open [http://localhost:3001](http://localhost:3001) in a browser. `./src/main.js` is the entry point.
+Open [http://localhost:3001](http://localhost:3001) in a browser.
 
 ## Bundling 
 
