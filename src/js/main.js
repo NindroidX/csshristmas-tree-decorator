@@ -10,6 +10,11 @@ let draggedDecorations = document.getElementById('draggedDecorations');
 let decorationInteractable = interact('.dragged-decorations .decoration')
   .draggable({
     inertia: true,
+    // Rectangular shapes aren't precise enough :/
+    // restrict: {
+    //   restriction: document.querySelector('.christmas-tree'),
+    //   endOnly: true,
+    // },
     onmove: (event) => {
       let target = event.target;
           // keep the dragged position in the data-x/data-y attributes

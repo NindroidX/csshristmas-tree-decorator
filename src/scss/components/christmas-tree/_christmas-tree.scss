@@ -9,12 +9,14 @@
    bottom: calc(#{$floorHeight} - 10%); // Position the tree relative to the floor
    width: 100%;
    z-index: 9;
+   text-align: center;
  }
 
 .christmas-tree {
   position: relative;
   transform: scale(.8);
   transform-origin: bottom;
+  display: inline-block;
 
   @media(min-width: 768px) {
     transform: scale(1);
