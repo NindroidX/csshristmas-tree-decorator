@@ -9,7 +9,7 @@ Create a small web app in which you can decorate a christmas tree
 * HTML5 Canvas rendering isn't allowed either
 * Must work on mobile devices
 
-A live version can be found [here](https://nindroidx.github.io/csshristmas-tree-decorator/)
+A live version can be found [here](https://windvis.github.io/csshristmas-tree-decorator/)
 
 ## Environment setup 
 
